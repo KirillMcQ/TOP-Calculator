@@ -16,7 +16,13 @@ const divide = (x, y) => {
 }
 
 // Variables needed for calculations; will be user inputted
-let firstNumber = "";
+let firstNum = "";
 let operator = "";
-let secondNumber = "";
+let secondNum = "";
 
+const operate = (firstNum, operator, secondNum) => {
+    if (operator === "+") return add(firstNum, secondNum);
+    if (operator === "-") return subtract(firstNum, secondNum);
+    if (operator === "*") return multiply(firstNum, secondNum);
+    if (operator === "/") return divide(firstNum, secondNum);
+}
