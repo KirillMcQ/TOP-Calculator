@@ -10,21 +10,22 @@
 <body>
     <div class="centerDiv">
             <div class="button-container">
-                <input class="display" value="0">
-                <button> 1 </button>
-                <button> 2 </button>
-                <button> 3 </button>
-                <button> 4 </button>
-                <button> 5 </button>
-                <button> 6 </button>
-                <button> 7 </button>
-                <button> 8 </button>
-                <button> 9 </button>
-                <button> + </button>
-                <button> - </button>
-                <button> * </button>
-                <button> / </button>
-                <button> = </button>
+                <input class="display">
+                <button value="1" onclick="handleNumClick(this.value)"> 1 </button>
+                <button value="2" onclick="handleNumClick(this.value)"> 2 </button>
+                <button value="3" onclick="handleNumClick(this.value)"> 3 </button>
+                <button value="4" onclick="handleNumClick(this.value)"> 4 </button>
+                <button value="5" onclick="handleNumClick(this.value)"> 5 </button>
+                <button value="6" onclick="handleNumClick(this.value)"> 6 </button>
+                <button value="7" onclick="handleNumClick(this.value)"> 7 </button>
+                <button value="8" onclick="handleNumClick(this.value)"> 8 </button>
+                <button value="9" onclick="handleNumClick(this.value)"> 9 </button>
+                <button value="0" onclick="handleNumClick(this.value)"> 0 </button>
+                <button value="+" onclick="handleOpClick(this.value)"> + </button>
+                <button value="-" onclick="handleOpClick(this.value)"> - </button>
+                <button value="*" onclick="handleOpClick(this.value)"> * </button>
+                <button value="/" onclick="handleOpClick(this.value)"> / </button>
+                <button onclick="handleEqualClick()"> = </button>
             </div>
     </div>
         
