@@ -39,7 +39,7 @@ const handleNumClick = (value) => {
     }
     else {
         secondNum += value;
-        replaceDislpay(secondNum);
+        replaceDisplay(secondNum);
     }
 }
 
@@ -53,7 +53,7 @@ const appendToDisplay = (numAsStr) => {
     display.value += numAsStr;
 }
 
-const replaceDislpay = (value) => {
+const replaceDisplay = (value) => {
     display.value = value;
 }
 
@@ -69,10 +69,22 @@ const clearDisplay = () => {
 
 const handleEqualClick = () => {
     if (operator === "/" && secondNum === "0") {
-        replaceDislpay("Don't divide by 0 plzz");
+        replaceDisplay("Don't divide by 0 plzz");
         return;
     }
     let output = operate(parseInt(firstNum), operator, parseInt(secondNum));
-    replaceDislpay(output);
+    replaceDisplay(output);
     clearValues();
+}
+
+const negativeToggle = () => {
+    if (operator === "") {
+        console.log("Make the first number negative");
+        firstNum = "-" + firstNum;
+        replaceDisplay(firstNum);
+    } else if (operator !== "") {
+        console.log("Make the second number negative");
+        secondNum = "-" + secondNum;
+        replaceDisplay(secondNum);
+    }
 }
